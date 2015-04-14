@@ -1,0 +1,43 @@
+/* Header buttons */
+.header > .ui-btn {
+  width: 31px;
+  height: 31px;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.header > .ui-btn,
+.header.ui-header-fixed.ui-fixed-hidden > .ui-btn-icon-notext {
+  top: 1.1em;
+}
+.header .navmenu-link {
+  left: 15px;
+}
+.header .search-link {
+  right: 15px;
+}
+.header > .ui-btn,
+.header > .ui-btn .ui-btn-inner {
+  border: none;
+  background: none;
+}
+.header > .ui-btn,
+.header > .ui-btn .ui-icon {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  
+/* Custom icons */
+.header > .ui-btn .ui-icon {
+  background-image: url(../img/icons-sd.png);
+  background-color: transparent;
+  width: 31px;
+  height: 31px;
+  margin: 0;
+}
+.header .navmenu-link .ui-icon {
+  background-position: -3px 50%;
+}
+.header .search-link .ui-icon {
+  background-position: -100px -2px;
+}

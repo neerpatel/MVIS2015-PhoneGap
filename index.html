@@ -1,40 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>title</title>
-  <meta name="viewport"
-        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-width, target-densitydpi=device-dpi">
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
+    <title>Training App</title>
+      <link rel="stylesheet"  href="assets/css/jquery.mobile.theme.css">
+      <link rel="stylesheet"  href="assets/css/jquery.mobile.structure.css">
+    <link rel="stylesheet"  href="assets/css/jquery.mobile.css">
+    <link rel="stylesheet"  href="assets/css/master.css">
+    <link rel="shortcut icon" href="favicon.ico">
 
-  <!-- build:css(.tmp) styles/bootflat-extra.css -->
-  <link href="bootflat/css/bootstrap.min.css" rel="stylesheet">
-  <link href="bootflat/css/bootflat.css" rel="stylesheet" media="screen">
+      <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+
+    <script src="assets/js/jquery.js"></script>
+
+    <script src="assets/js/jquery.mobile.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="assets/js/jquery.ui.map.min.js"></script>
+    <script src="assets/js/jquery.ui.map.services.min.js"></script>
+    <script src="assets/js/jquery.ui.map.extensions.js"></script>
+    <script src="assets/js/plugin.js"></script>
+    
+    <!-- <script src="phonegap.js" type="text/javascript" charset="utf-8"></script> -->
+    
+    
+    <script src="assets/js/lawnchair/adaptors/LawnchairAdaptorHelpers.js" type="text/javascript" charset="utf-8"></script>
+    
+    <script src="assets/js/lawnchair/adaptors/DOMStorageAdaptor.js" type="text/javascript" charset="utf-8"></script>
+    
+    <script src="assets/js/lawnchair/adaptors/WebkitSQLiteAdaptor.js" type="text/javascript" charset="utf-8"></script>
+    
+    <script src="assets/js/lawnchair/Lawnchair.js" type="text/javascript" charset="utf-8"></script>
+    
+    <script src="assets/js/dsl.js" type="text/javascript" charset="utf-8"></script>
+    
+    <script src="assets/js/app.js" type="text/javascript" charset="utf-8"></script>
     
   </head>
   <body>
-    <!-- page content -->
-    
-    <div id="logo"><img src="http://placehold.it/960x150/005?text=Logo" class="img-responsive center-block"></div>
 
-    <div id="form" class="input-group input-group-lg">
-      <input type="text" class="form-control" id="twitter-search">
-      <button type="button" class="btn btn-default" id="twitter-button">Go!</button>
+    <div data-role="page" data-theme="a" id="home">
+    <div data-role="header" data-position="fixed" class="header">
+      <a href="#" data-icon="bars" class="navmenu-link" data-iconpos="notext">Nav</a>
+      <h1>Spectrum </h1>
     </div>
-    <div id="twitter_feed"></div>
 
-    <div id="content1" class="col-md-6">Bacon ipsum dolor amet strip steak rump turkey, fatback leberkas ground round pastrami swine shank tri-tip. Tongue capicola tri-tip venison, picanha ball tip landjaeger doner leberkas pork belly brisket pig. Bacon capicola short loin beef ribs jerky ribeye, drumstick leberkas swine ball tip sirloin doner tongue shankle. Tenderloin brisket beef ribs spare ribs cow t-bone. Venison strip steak shoulder spare ribs, ham hock beef pork belly tongue.</div>
+      <div data-role="content" data-theme="a">
+        <div  style="background:url(http://placekitten.com/g/500/250); width:100%; height:200px;"></div>
+        <a data-role="button" href="#gps-map" data-theme="a">Show My Location</a>
+            <a href="#twitter" data-role="button" data-theme="a" >Twitter</a>
+      </div>
+    </div>
+    
+    <div id="gps-map" data-role="page" data-theme="c">
+      <div data-role="header">
+        <h1>My location</h1>
+        <a data-rel="back">Back</a>
+      </div>
+      <div data-role="content" style="padding:0px"> 
+        
+          <div id="map_square" style="position:absolute; width:100%; height:100%; min-height:100%;"></div>
+        
+      </div>
+    </div>
 
-    <div id="content2" class="col-md-6">
-    Jowl shoulder kevin, ground round ham alcatra shankle chuck pork short loin beef sausage. Meatball doner pastrami tenderloin tail short ribs tri-tip ribeye cow biltong. Rump turkey prosciutto short loin ground round pig. Salami tenderloin beef, pork chop turkey frankfurter kielbasa ham. Cupim filet mignon alcatra leberkas, pastrami spare ribs turkey.
-</div>
-    <div class="col-md-12">
-Capicola chicken salami bresaola, t-bone swine pig biltong meatloaf prosciutto ham hock filet mignon fatback beef ribs pork chop. Cow landjaeger swine, strip steak pork beef ribs short loin andouille. Flank corned beef ribeye turkey spare ribs boudin. Ham capicola salami, spare ribs drumstick beef ribs kevin. Shank ball tip drumstick ham hock, pancetta corned beef pig pork belly biltong alcatra. Tail prosciutto rump corned beef beef ribs salami sausage tongue bresaola.</div>
+    <div data-role="page" data-theme="a" id="twitter">
+      <div data-role="header" data-position="inline">
+        <h1>Twitter Feed</h1>
+      </div>
+      <div data-role="content" data-theme="a">
+        
+        <fieldset>
+          <label for="twitter-search">Twitter Search : </label>
+        <input type="text" value="MultiValue" class="input" data-form="ui-body-a" id="twitter-search" />
+        </fieldset>
+        <div id="twitter_feed" style="">
+            Filler content
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <script src="js/plugin.js"></script>
+        </div>
+        <p>Link to page 1 <a href="#page1">CLICK HERE</a></p>
+      </div>
+    </div>
+
   </body>
 </html>
